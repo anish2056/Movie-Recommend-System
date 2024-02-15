@@ -28,7 +28,7 @@ movies = pd.DataFrame(pickle.load(open('movies.pkl', 'rb')))
 similarity = pickle.load(open('similarity.pkl', 'rb'))
 
 st.title("Movie Recommendation System")
-
+st.text("This system recommend Same type of 5 movie in the basis of director, actor,duration etc.")
 selected_movie_name = st.selectbox("Select Your Best Movie.", (movies['title'].values))
 if st.button('Recommend'):
     mv_name, mv_poster = recommend(selected_movie_name)
